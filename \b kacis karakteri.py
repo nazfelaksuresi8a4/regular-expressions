@@ -21,6 +21,14 @@ result = re.findall(pattern,text)
 if result:  #ark ile biten kelime varsa burası calısır
     print('eşleşme var')
 
+pattern = r'\barkadaşlar\b'    #\b kacis karakteri her iki tarafta ise arasında kalan kelimenin var olup olmadıgını kontrol eder çünkü mantık olarak bir kelimenin kendisi zaten kendisi ile başlayıp kendisi ile bitmek zorundadır.
+
+result = re.findall(pattern,text)
+
+if result:  #ark ile biten kelime varsa burası calısır
+    print('eşleşme var')
+
+
 else:
     print('eşleşme yok')
 
