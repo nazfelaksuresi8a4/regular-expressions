@@ -28,7 +28,18 @@ result = re.findall(pattern,text)
 if result:  #ark ile biten kelime varsa burası calısır
     print('eşleşme var')
 
+pattern = r'\Barkadaşlar'    #\B kacis karakteri \b nin tam tersidir eğer bir kelimenin başında veya sonunda (belirtilene göre baş veya son) belirilen harf zinciri yok ise true döner ve harf ziniciri olmayanların eşleştiklerini listeye koyup döner.
+result = re.findall(pattern,text)
 
+if result:  #başında yoksa çalışır
+    print('eşleşme var')
+
+
+pattern = r'\Barkadaşlar'    #Yukarıdakinin bitiş versiyonu
+result = re.findall(pattern,text)
+
+if result:  #sonunda yoksa çalışır
+    print('eşleşme var')
 else:
     print('eşleşme yok')
 
