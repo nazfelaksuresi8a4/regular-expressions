@@ -1,0 +1,13 @@
+import re 
+
+text = 'Merhaba dünya'
+
+result = re.findall('^Merh',text)    #^ işareti metnin başlangıcından başlayıp kontrol et demektir başında M varsa veya başındaki kelimeyi yazarsak liste olarak döner 
+
+if result:
+    print('eşleşme var ')
+
+else:
+    print('eşleşme yok')
+
+print(result)
